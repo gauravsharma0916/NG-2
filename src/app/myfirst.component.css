@@ -1,0 +1,37 @@
+.demo{
+	color:red;
+    background:yellow;
+}
+.my-head{
+height:40%;
+width:100%;
+color:blue;
+background: yellow;
+
+}
+
+.kanpur{
+color:yellow;
+background: brown;
+
+}
+
+/*margin from left */
+.mls{
+margin-left:5px;
+}
+.mlm{
+margin-left:10px;
+}
+.mll{
+margin-left:15px;
+}
+.mlxs{
+margin-left:40%;
+}
+
+
+
+/*hello */
+
+

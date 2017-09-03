@@ -1,0 +1,55 @@
+<h2>Hello tab two  template </h2>
+<h3>Your name is: {{configservice.get_service_data().name}}</h3>
+<h2>{{getterSetter}}</h2>
+<button (click)="showdata();demo()">show data</button>
+<!--<h3>Your age is: {{}}</h3>
+<h3>Your address is: {{}}</h3>
+<h3>Your mobile is: {{}}</h3>-->
+<br/>
+
+<!-- radio button -->
+<div class="jumbotron">
+<span>one</span>
+<input type="radio" name="cc1" value=1 (change)="firstRadioBtn($event)"/>
+
+<span>two</span>
+<input type="radio" name="cc1" value=2 (change)="secondRadioBtn($event)"/>
+
+<span>three</span>
+<input type="radio" name="cc1" value=3 (change)="thirdRadioBtn($event)"/>
+<br/>
+<!--  input field for radio button -->
+<span class=" btn-primary badge ">One</span>
+<select id="daysName" [disabled]="firstdrpdwn">
+    <option>Sunday</option>
+    <option selected="selected">Monday</option>    
+    <option>Tuesday</option>
+</select>
+
+
+<span class="badge">Two</span>
+<select id="monthsName" [disabled]="seconddrpdwn">
+    <option selected="selected">January</option>
+    <option>February</option>
+    <option>March</option>
+</select>
+
+<span class="badge">Three</span>
+<select id="yearsName" [disabled]="thirddrpdwn">
+    <option selected="selected">2017</option>
+    <option>2018</option>
+    <option>2019</option>
+</select>
+<!--add date picker here -->
+<ng2-datepicker [options]="options" [(ngModel)]="date" [disabled]="fourthdrpdwn"></ng2-datepicker>
+<image-upload [max]="1" [extensions]="['jpg','png','gif']"></image-upload>
+<button type="button" class="btn btn-primary">upload</button>
+</div>
+<!-- chillu 15800
+sang 23500
+rohit 17000
+bavdi 5000
+javed 14000
+chappu 5000
+pradip 5000
+vishal 4000 -->

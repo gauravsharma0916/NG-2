@@ -1,0 +1,51 @@
+[
+{
+"name":"gaurav sharma",
+"age":27,
+"company":"hcl technologies",
+"mobile":9889440531,
+"hometown":"kanpur"
+},
+{
+"name":"amit singh",
+"age":29,
+"company":"zensar technologies",
+"mobile":9168575192,
+"hometown":"kanpur"
+},
+{
+"name":"rishi kant",
+"age":30,
+"company":"accenture",
+"mobile":1234567890,
+"hometown":"kanpur"
+},
+{
+"name":"pallavi shishodia",
+"age":27,
+"company":"accenture",
+"mobile":1234567899,
+"hometown":"delhi"
+},
+{
+"name":"Rohit Joshi",
+"age":27,
+"company":"Infosys",
+"mobile":1234567899,
+"hometown":"chandighar"
+},
+{
+"name":"Kapil Sharma",
+"age":28,
+"company":"accenture",
+"mobile":1234567899,
+"hometown":"delhi"
+},
+{
+"name":"jawed akhtar",
+"age":45,
+"company":"hcl tech",
+"mobile":7289953279,
+"hometown":"delhi"
+}
+]

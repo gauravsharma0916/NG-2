@@ -1,0 +1,14 @@
+<h2>Hello tab one template </h2>
+<div>
+    <form #myForm="ngForm" (ngSubmit)="formData(myForm.value);navigate()" >
+    <div><label>Name</label></div>
+    <div><input type="text" name="name" ngModel/></div>
+    <div><label>Age</label></div>
+    <div><input type="number" name="age" ngModel/></div>
+    <div><label>Add</label></div>
+    <div><input type="text" name="add" ngModel/></div>
+    <div><label>Mob</label></div>
+    <div><input type="number" name="mob" ngModel /></div><br/><br/>
+    <button type="submit"  class="btn btn-primary">Send</button>
+    </form>
+</div>

@@ -1,0 +1,8 @@
+# Editor configuration, see http://editorconfig.org
+
+indent_style = space
+insert_final_newline = true
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
