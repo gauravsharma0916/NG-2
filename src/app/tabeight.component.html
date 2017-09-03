@@ -1,0 +1,61 @@
+
+<div class="container">
+        <h2>make form using form builder </h2>
+<form [formGroup]="myCustomForm" (ngSubmit)="onSubmit()">
+     <div class="form-group">
+        <label ><strong> Name</strong></label>
+          <input type="text"  class="form-control" formControlName="name" required>
+             <div *ngIf="myCustomForm.controls['name'].hasError('required')" class="alert alert-danger">
+                 Please enter your name.
+             </div>
+                  <div *ngIf="myCustomForm.controls['name'].hasError('minlength')" class="alert alert-danger">
+                      Please enter minimum 4 character  name.
+                  </div>
+                  <div *ngIf="myCustomForm.controls['name'].hasError('maxlength')" class="alert alert-danger">
+                      Please enter only 13 character name.
+                  </div>
+          
+     </div>
+
+
+     <div class="form-group">
+        <label><strong>E-mail</strong></label>
+          <input type="text"  class="form-control" formControlName="email">
+          
+     </div>
+
+   <div formGroupName="address">
+         <div class="form-group">
+                <label><strong>Street</strong></label>
+                <input type="text"  class="form-control" formControlName="street">
+                  
+         </div>
+        
+        
+             <div class="form-group">
+                <label><strong>City</strong></label>
+                  <input type="text"  class="form-control" formControlName="city">
+                  
+             </div>
+        
+        
+             <div class="form-group">
+                <label><strong>Pincode</strong></label>
+                  <input type="number"  class="form-control" formControlName="pincode">
+
+                  <div *ngIf="myCustomForm.controls['address'].controls['pincode'].hasError('pattern')" class="alert alert-danger">
+                        Please enter  five digit pin no. only                  
+                    
+                    </div>
+                  
+             </div>
+   
+    </div>
+     
+
+     <button  class="btn btn-primary" [disabled]="!myCustomForm.valid" type="submit">Submit</button>
+
+
+
+</form>
+</div>

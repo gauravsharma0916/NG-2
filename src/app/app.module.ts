@@ -1,7 +1,7 @@
 console.log("app.module.ts");  
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule   } from '@angular/forms'; //add ReactiveFormsModule for use to form builder
 import { HttpModule } from '@angular/http';
  import { ConfigService } from './myservicedata';
 //import for router module
@@ -15,15 +15,18 @@ import { tabtwoComponent } from './tabtwo.component';
 
 
 import { FirstComponent } from './myfirst.component';
-// import ajax component here only a
+// import ajax component here only 
 import { ajaxComponent } from './app.ajexcomponent';
 // import tab five component here 
 import { tabfiveComponent } from './tabfive.Component';
 // import tab six component here 
 import { tabsixComponent } from './tabsix.Component';
 
-//mport seventh componenet here 
+//import seventh componenet here 
 import { tabsevenComponent } from './tabseven.Component';
+
+//import eighth componenet here 
+import { tabeightComponent } from './tabeight.component';
 // import date picker 
 import { DatePickerModule } from 'ng2-datepicker';
 //import image uploader
@@ -38,11 +41,13 @@ import { ImageUploadModule } from 'angular2-image-upload';
     ajaxComponent,
     tabfiveComponent,
     tabsixComponent,
-    tabsevenComponent      
+    tabsevenComponent,
+    tabeightComponent      
   ],
   imports: [
     BrowserModule,
     DatePickerModule ,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {path:'tab_one', component:taboneComponent},
       {path:'tab_two', component:tabtwoComponent},
@@ -51,6 +56,7 @@ import { ImageUploadModule } from 'angular2-image-upload';
       {path:'tab-five', component:tabfiveComponent},
       {path:'tab-six', component:tabsixComponent},
       {path:'tab-seven', component:tabsevenComponent},
+      {path:'tab-eight', component:tabeightComponent}
     ]),
     ImageUploadModule.forRoot(),
     FormsModule,

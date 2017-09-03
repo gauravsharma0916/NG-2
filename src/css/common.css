@@ -37,3 +37,16 @@ body {
 	z-index: -1;
 	visibility: hidden;
 }
+
+.demo{
+    height: 150px;
+    width: 200px;
+    border: 5px solid rgb(16, 15, 15);
+}
+
+input.ng-invalid{
+	border-left:3px solid red;
+}
+input.ng-valid{
+	border-left:3px solid green;
+}
