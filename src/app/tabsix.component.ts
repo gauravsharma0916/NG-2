@@ -11,6 +11,7 @@ import { ConfigService } from './myservicedata';
   
   
 export class tabsixComponent {
+  public dataholder:any=[];
     @Input() inputArrayIn;
     // private pm:any;
   //public inputArray1:any;
@@ -23,6 +24,20 @@ export class tabsixComponent {
 // this.pm=inputArrayIn;
 // }
   
+
+
+MyCustomEvent(data){ 
+  this.dataholder.push(data) ;
+  console.log("value of data is",data);
+  
+}
+
+
+
+
+
+
+
   
    }
    
