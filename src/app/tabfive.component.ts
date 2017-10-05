@@ -43,9 +43,5 @@ let information={
 
 }
 
-  
-   
-       
-   
-   
+
 
