@@ -32,7 +32,7 @@ ngOnInit(){
         address:this.formBuilder.group({
             street:[],
             city:[],
-            pincode:[null,Validators.pattern('^[1-9][0-9]{4}$')]
+            pincode:[null,Validators.pattern('^[1-9][0-9]{5}$')]
 
 
         })
