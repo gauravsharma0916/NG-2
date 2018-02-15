@@ -21,6 +21,10 @@ export class tabtwoComponent {
   public seconddrpdwn;
   public thirddrpdwn;
   public fourthdrpdwn;
+  public default:boolean=true;
+  public one:any=true;
+  public two:any=true;
+  public three:any=true;
   
   // public  store_service_data:any=[];
   // for adding datepicker support file start here 
@@ -119,6 +123,46 @@ demo(){
   console.log("its value of family", this.person.third_person);
   console.log("its value of family", this.person.fourth_person);
   
+}
+
+// checkbox functionality test here
+ allCheckBox(){
+   this.one=!this.one;
+   this.two=!this.two;
+   this.three=!this.three;
+   
+}
+oneCheckBox(){
+  this.one=!this.one;
+  if(this.one==false ||this.two==false || this.three==false){
+    this.default=false;
+  } 
+
+  if(this.one==true && this.two==true && this.three==true){
+    this.default=true;
+  } 
+}
+
+twoCheckBox(){
+  this.two=!this.two;
+  if(this.one==false ||this.two==false || this.three==false){
+    this.default=false;
+  }
+
+  if(this.one==true && this.two==true && this.three==true){
+    this.default=true;
+  } 
+}
+
+threeCheckBox(){
+  this.three=!this.three;
+  if(this.one==false ||this.two==false || this.three==false){
+    this.default=false;
+  }
+
+  if(this.one==true && this.two==true && this.three==true){
+    this.default=true;
+  } 
 }
 
 

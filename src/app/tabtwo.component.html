@@ -15,9 +15,16 @@
 <span>two</span>
 <input type="radio" name="cc1" value=2 (change)="secondRadioBtn($event)"/>
 
+
 <span>three</span>
 <input type="radio" name="cc1" value=3 (change)="thirdRadioBtn($event)"/>
 <br/>
+
+<!-- checkboxes -->
+<label>All</label><input type="checkbox"  [checked]="default" (change)="allCheckBox($event)"/><br/>
+<label>one</label><input type="checkbox"  [checked]="one" (change)="oneCheckBox($event)"/><br/>
+<label>two</label><input type="checkbox"  [checked]="two" (change)="twoCheckBox($event)"/><br/>
+<label>three</label><input type="checkbox"[checked]="three"(change)="threeCheckBox($event)"/><br/>
 <!--  input field for radio button -->
 <span class=" btn-primary badge ">One</span>
 <select id="daysName" [disabled]="firstdrpdwn">
