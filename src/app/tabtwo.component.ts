@@ -126,10 +126,25 @@ demo(){
 }
 
 // checkbox functionality test here
- allCheckBox(){
-   this.one=!this.one;
-   this.two=!this.two;
-   this.three=!this.three;
+ allCheckBox(){  
+  var element = <HTMLInputElement> document.getElementById("is3dCheckBox");
+  var isChecked = element.checked;
+  if (isChecked){
+    alert("checked hai !!!!!");
+    this.one=true;
+    this.two=true;
+    this.three=true;
+  }
+
+  if (!isChecked){
+    alert("checked nahi hai !!!!!");
+    this.one=false;
+    this.two=false;
+    this.three=false;
+  }
+
+   
+   
    
 }
 oneCheckBox(){
