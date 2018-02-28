@@ -11,7 +11,7 @@ formData(data:any){
 // alert("hello");
 // console.log("data ki value"+ data);
 this.configservice.set_service_data(data);
-console.log("value of data which is set by me into service"+ data);
+console.log("value of data which is set by me into service", data);
 
 };
 // for navigate from one url to another url
