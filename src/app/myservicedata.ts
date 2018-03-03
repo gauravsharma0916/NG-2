@@ -23,9 +23,12 @@ this.serviceData=value;
 
 constructor(private http:Http) {}
 // Uses http.get() to load a single JSON file  
-getFriendsData():any {
+getFriendsData():Observable<any> {
 return this.http.get(this._url).map(
 (response:Response) =>  response.json()
+
                                    );
+                                   
                      }
+                     
                            };
