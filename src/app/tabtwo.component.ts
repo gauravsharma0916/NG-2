@@ -1,9 +1,10 @@
   console.log("tabtwocomponent.ts");
-import { Component ,OnInit} from '@angular/core';
+import { Component ,OnInit, trigger} from '@angular/core';
  import { ConfigService } from './myservicedata';
  import 'rxjs/Rx'; // add this file for use the map feature.
  //  import file for datepicker 
  import { DatePickerOptions, DateModel } from 'ng2-datepicker';
+import { isNumber, isString } from 'util';
  
 
 
@@ -25,6 +26,7 @@ export class tabtwoComponent {
   public one:any=true;
   public two:any=true;
   public three:any=true;
+  public dateVal:any;
   
   // public  store_service_data:any=[];
   // for adding datepicker support file start here 
@@ -33,13 +35,25 @@ export class tabtwoComponent {
 // for adding datepicker support file end here 
    constructor(private configservice:ConfigService) {}
       ngOnInit(){
+        this.dateVal=new Date();
         this.configservice.get_service_data();
-        this.options = new DatePickerOptions();
+        this.options = new DatePickerOptions({
+          format: 'DD-MM-YYYY',
+          //  minDate:new Date(16-0o7-1990),
+          //  maxDate:new Date(16-0o7-2018),
+           initialDate:new Date(),
+           firstWeekdaySunday:true,
+           selectYearText:"Please select year",
+           autoApply:true,
+           clearText:"hello",
+           
+        });
         
        this.firstdrpdwn=true;
        this.seconddrpdwn=true;
        this.thirddrpdwn=true;
        this.fourthdrpdwn=true;
+       console.log("value of datepicker", this.date)
       }        
               
 showdata(){
@@ -72,6 +86,13 @@ thirdRadioBtn(eve){
        this.seconddrpdwn=true;
        this.thirddrpdwn=false;
 
+}
+
+modelChange(event){
+  this.date=event
+  //  this.date=e;
+  // alert("value of selected date is" + this.date);
+  console.log(event)
 }
 
 // test your code here properly 

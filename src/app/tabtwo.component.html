@@ -48,8 +48,10 @@
     <option>2019</option>
 </select>
 <!--add date picker here -->
-<ng2-datepicker [options]="options" [(ngModel)]="date" [disabled]="fourthdrpdwn"></ng2-datepicker>
+<ng2-datepicker [options]="options" [(ngModel)]="date" (ngModelChange)="modelChange($event)" [disabled]="fourthdrpdwn"></ng2-datepicker>
 <image-upload [max]="1" [extensions]="['jpg','png','gif']"></image-upload>
 <button type="button" class="btn btn-primary">upload</button>
 </div>
+
+
 
