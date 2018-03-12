@@ -45,4 +45,19 @@ onSubmit(data){
     console.log("form fields values are", this.myCustomForm.value);
 }
 
+// my method
+
+demo(){
+    
+}
+pinlimitation(event){
+    let pinlength=event.length;
+    if(pinlength==7 || pinlength>7){
+        // event.preventDefaullt();
+        alert("7 char");
+
+    }
+
+}
+
 }
