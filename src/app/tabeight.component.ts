@@ -11,6 +11,7 @@ selector: 'tab-eight',
 templateUrl: './tabeight.component.html'
 })
 export class tabeightComponent implements OnInit {
+ public pincodeLength:any=6;
 constructor( private formBuilder:FormBuilder) {}
 myCustomForm : FormGroup;
 // ({
@@ -47,17 +48,23 @@ onSubmit(data){
 
 // my method
 
-demo(){
+// pinlimitation(event){
+
     
-}
-pinlimitation(event){
-    let pinlength=event.length;
-    if(pinlength==7 || pinlength>7){
-        // event.preventDefaullt();
-        alert("7 char");
+   
+//     // let pp =event.currentTarget.attributes.length;
+//     // console.log("event value",event);
+//     // console.log("event value length",pp);
+//     // let userInputvalue = (<HTMLInputElement>document.getElementById("myId")).value; 
+//     // let inputLegth=userInputvalue.length;
+//     // console.log("length of input field is",inputLegth);
+//     // if (inputLegth>6){
+//     // return false
+//     //     // event.preventDefault();
+//     //     // event.
+//     //     // alert("input is more than six no.");
+//     // }
 
-    }
-
-}
+// }
 
 }

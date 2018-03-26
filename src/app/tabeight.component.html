@@ -41,7 +41,15 @@
         
              <div class="form-group">
                 <label><strong>Pincode</strong></label>
-                  <input type="number"  class="form-control" formControlName="pincode">
+                  <!-- <input type="text"  class="form-control" formControlName="pincode" id="myId" (keyup)="pinlimitation($event)" maxlength="6"> -->
+                  <input 
+                  name="somename"
+                  class="form-control" 
+                  formControlName="pincode"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  type = "number"
+                  maxlength = "6"
+                  />
 
                   <div *ngIf="myCustomForm.controls['address'].controls['pincode'].hasError('pattern')" class="alert alert-danger">
                         Please enter  min. six digit pin no.                 
