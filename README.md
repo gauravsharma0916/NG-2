@@ -12,3 +12,5 @@ After installation of node server
 
 for vs code extra fetures 
 https://www.ngdevelop.tech/10-popular-vscode-extensions/
+
+For angular upgraditon platform=>https://angular-update-guide.firebaseapp.com/
